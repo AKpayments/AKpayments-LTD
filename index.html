@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AKpayments — Manpower & House Shifting</title>
+  <title>AKpayments | Manpower & House Shifting</title>
 
   <meta
     name="description"
-    content="AKpayments provides reliable manpower and house shifting support."
-  />
+    content="AKpayments provides manpower and house shifting support for homes, flats and moving jobs."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,27 +17,21 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet"
-  />
+  >
 
   <style>
+
     :root {
-      --ink: #171717;
-      --cream: #f8f5ec;
+      --navy: #101a2f;
+      --navy-2: #18243d;
+      --yellow: #ffca28;
+      --yellow-light: #ffd95a;
+      --cream: #f7f7f3;
       --white: #ffffff;
-
-      --lime: #c9ef9b;
-      --yellow: #ffd85a;
-      --coral: #ff8265;
-      --pink: #efb5cf;
-      --blue: #b9ddff;
-      --purple: #d4ccff;
-
-      --muted: #69645d;
-      --border: #ddd7c9;
-      --skin: #f2b58f;
-      --shirt: #5e68a8;
-      --trouser: #353535;
-      --box: #c99559;
+      --light-blue: #e9f3ff;
+      --light-yellow: #fff4c8;
+      --muted: #6d7380;
+      --border: #e5e7eb;
     }
 
     * {
@@ -53,1604 +47,1543 @@
     body {
       font-family: "DM Sans", sans-serif;
       background: var(--cream);
-      color: var(--ink);
-      overflow-x: hidden;
+      color: var(--navy);
+      line-height: 1.5;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .container {
-      width: min(1180px, calc(100% - 40px));
+      width: min(1220px, calc(100% - 40px));
       margin: 0 auto;
     }
 
-    /* =========================
-       NAV
-    ========================= */
+
+    /* ================================
+       HEADER
+    ================================= */
 
     header {
-      padding: 20px 0;
-      border-bottom: 1px solid rgba(23, 23, 23, 0.08);
-      background: rgba(248, 245, 236, 0.97);
+      background: var(--white);
+      border-bottom: 1px solid #ececec;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .nav {
+      min-height: 78px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      align-items: center;
+      gap: 25px;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 11px;
+      gap: 10px;
       font-family: "Space Grotesk", sans-serif;
+      font-size: 1.35rem;
       font-weight: 700;
-      font-size: 1.25rem;
+      white-space: nowrap;
     }
 
     .logo-mark {
-      width: 43px;
-      height: 43px;
-      border-radius: 13px;
-      background: var(--ink);
-      color: var(--white);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--navy);
       display: grid;
       place-items: center;
-      font-size: 0.82rem;
-      font-weight: 700;
+      color: var(--yellow);
+      font-weight: 800;
+      font-size: 0.95rem;
     }
 
     .nav-links {
       display: flex;
+      gap: 32px;
       align-items: center;
-      gap: 28px;
-      font-size: 0.94rem;
+      font-size: 0.92rem;
       font-weight: 600;
     }
 
     .nav-links a {
-      opacity: 0.72;
-      transition: 0.2s ease;
+      color: #2b3344;
+      transition: .2s ease;
     }
 
     .nav-links a:hover {
-      opacity: 1;
+      color: var(--navy);
     }
 
-    .nav-cta {
-      background: var(--ink);
-      color: var(--white);
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.9rem;
+    .header-button {
+      background: var(--yellow);
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 800;
+      color: var(--navy);
+      transition: .2s ease;
     }
 
-    /* =========================
+    .header-button:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* ================================
        HERO
-    ========================= */
+    ================================= */
 
     .hero {
-      padding: 72px 0 45px;
+      position: relative;
+      min-height: 650px;
+      overflow: hidden;
+      color: var(--white);
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(10,18,34,.97) 0%,
+          rgba(10,18,34,.91) 38%,
+          rgba(10,18,34,.47) 68%,
+          rgba(10,18,34,.15) 100%
+        ),
+        url("https://images.pexels.com/photos/7464232/pexels-photo-7464232.jpeg?auto=compress&cs=tinysrgb&w=1800")
+        center center / cover no-repeat;
     }
 
-    .hero-grid {
+    .hero-inner {
+      min-height: 650px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
+      grid-template-columns: 0.9fr 1.1fr;
       align-items: center;
+    }
+
+    .hero-copy {
+      padding: 60px 0;
+      position: relative;
+      z-index: 5;
+      max-width: 620px;
     }
 
     .eyebrow {
       display: inline-flex;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: var(--yellow);
-      font-size: 0.73rem;
+      align-items: center;
+      gap: 9px;
+      font-size: .75rem;
       font-weight: 800;
-      letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 23px;
+      letter-spacing: .12em;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::after {
+      content: "";
+      width: 42px;
+      height: 3px;
+      background: var(--yellow);
+      display: inline-block;
     }
 
     .hero h1 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(4rem, 7vw, 7rem);
-      line-height: 0.88;
-      letter-spacing: -0.065em;
-      max-width: 700px;
+      font-size: clamp(3.4rem, 6vw, 6.5rem);
+      line-height: .9;
+      letter-spacing: -.065em;
     }
 
-    .hero h1 .highlight {
-      position: relative;
-      display: inline-block;
-      z-index: 1;
+    .hero h1 span {
+      color: var(--yellow);
     }
 
-    .hero h1 .highlight::after {
-      content: "";
-      position: absolute;
-      left: -3px;
-      right: -4px;
-      bottom: 5px;
-      height: 17px;
-      background: var(--pink);
-      border-radius: 9px;
-      transform: rotate(-1.5deg);
-      z-index: -1;
-    }
-
-    .hero-copy {
-      max-width: 570px;
-      margin-top: 27px;
-      color: var(--muted);
+    .hero p {
+      margin-top: 25px;
+      max-width: 540px;
+      color: #e8ebf0;
+      font-size: 1.08rem;
       line-height: 1.65;
-      font-size: 1.07rem;
     }
 
     .hero-buttons {
+      margin-top: 30px;
       display: flex;
-      gap: 12px;
+      gap: 13px;
       flex-wrap: wrap;
-      margin-top: 29px;
     }
 
-    .btn {
+    .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 15px 22px;
-      border: 2px solid var(--ink);
-      border-radius: 999px;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 14px;
       font-weight: 800;
-      transition: 0.2s ease;
+      transition: .2s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 7px 0 var(--ink);
-    }
-
-    .btn-dark {
-      background: var(--ink);
-      color: var(--white);
-    }
-
-    .btn-light {
-      background: transparent;
-    }
-
-    /* =========================
-       HERO VISUAL
-    ========================= */
-
-    .hero-visual {
-      position: relative;
-      min-height: 540px;
-      border-radius: 40px;
-      background: var(--lime);
-      overflow: hidden;
-      padding: 25px;
-    }
-
-    .visual-label {
-      position: absolute;
-      top: 25px;
-      left: 25px;
-      z-index: 20;
-      background: var(--white);
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 0.73rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-    }
-
-    .visual-circle {
-      position: absolute;
-      width: 340px;
-      height: 340px;
-      border-radius: 50%;
-      background: var(--coral);
-      right: -95px;
-      top: 80px;
-    }
-
-    .visual-yellow {
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
+    .button-yellow {
       background: var(--yellow);
-      left: -55px;
-      bottom: 55px;
+      color: var(--navy);
     }
 
-    .visual-purple {
-      position: absolute;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: var(--purple);
-      right: 55px;
-      bottom: 25px;
+    .button-outline {
+      border: 2px solid rgba(255,255,255,.85);
+      color: white;
     }
 
-    .scene {
-      position: absolute;
-      left: 25px;
-      right: 25px;
-      bottom: 18px;
-      height: 430px;
+    .button:hover {
+      transform: translateY(-2px);
     }
 
-    .scene-floor {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 35px;
-      background: var(--ink);
-      border-radius: 20px;
-    }
-
-    /* House */
-    .house {
-      position: absolute;
-      right: 60px;
-      top: 110px;
-      width: 230px;
-      height: 175px;
-      background: #f5e6c7;
-      border: 5px solid var(--ink);
-      border-radius: 8px;
-      z-index: 2;
-    }
-
-    .roof {
-      position: absolute;
-      left: -18px;
-      top: -85px;
-      width: 0;
-      height: 0;
-      border-left: 130px solid transparent;
-      border-right: 130px solid transparent;
-      border-bottom: 90px solid var(--ink);
-    }
-
-    .roof-inner {
-      position: absolute;
-      left: -115px;
-      top: 8px;
-      width: 230px;
-      height: 8px;
-      background: var(--coral);
-    }
-
-    .door {
-      position: absolute;
-      bottom: 0;
-      left: 92px;
-      width: 45px;
-      height: 80px;
-      background: var(--ink);
-      border-radius: 7px 7px 0 0;
-    }
-
-    .window {
-      position: absolute;
-      top: 28px;
-      width: 48px;
-      height: 48px;
-      background: var(--blue);
-      border: 4px solid var(--ink);
-    }
-
-    .window.left {
-      left: 25px;
-    }
-
-    .window.right {
-      right: 25px;
-    }
-
-    /* Van */
-    .van {
-      position: absolute;
-      left: 25px;
-      bottom: 55px;
-      width: 255px;
-      height: 125px;
-      background: var(--white);
-      border: 5px solid var(--ink);
-      border-radius: 18px 24px 13px 13px;
-      z-index: 8;
-    }
-
-    .van-front {
-      position: absolute;
-      right: -68px;
-      bottom: -5px;
-      width: 72px;
-      height: 95px;
-      background: var(--white);
-      border: 5px solid var(--ink);
-      border-left: none;
-      border-radius: 8px 18px 13px 0;
-    }
-
-    .van-window {
-      position: absolute;
-      right: 10px;
-      top: 15px;
-      width: 45px;
-      height: 40px;
-      background: var(--blue);
-      border: 4px solid var(--ink);
-      border-radius: 5px;
-    }
-
-    .van-logo {
-      position: absolute;
-      left: 24px;
-      top: 34px;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-
-    .wheel {
-      position: absolute;
-      bottom: -24px;
-      width: 47px;
-      height: 47px;
-      background: var(--ink);
-      border-radius: 50%;
-      border: 10px solid #777;
-    }
-
-    .wheel.one {
-      left: 35px;
-    }
-
-    .wheel.two {
-      right: 25px;
-    }
-
-    /* Person 1 */
-    .person-one,
-    .person-two {
-      position: absolute;
-      z-index: 12;
-    }
-
-    .person-one {
-      left: 225px;
-      bottom: 50px;
-    }
-
-    .person-two {
-      left: 380px;
-      bottom: 44px;
-    }
-
-    .head {
-      width: 42px;
-      height: 42px;
-      border: 4px solid var(--ink);
-      border-radius: 50%;
-      background: var(--skin);
-      position: relative;
-      z-index: 5;
-    }
-
-    .hair {
-      position: absolute;
-      width: 29px;
-      height: 15px;
-      top: -3px;
-      left: 3px;
-      background: var(--ink);
-      border-radius: 15px 15px 8px 8px;
-    }
-
-    .body {
-      width: 67px;
-      height: 96px;
-      margin-top: -2px;
-      background: var(--shirt);
-      border: 4px solid var(--ink);
-      border-radius: 18px 18px 8px 8px;
-    }
-
-    .arm {
-      position: absolute;
-      width: 20px;
-      height: 75px;
-      background: var(--skin);
-      border: 4px solid var(--ink);
-      border-radius: 16px;
-      top: 57px;
-    }
-
-    .arm.left-arm {
-      left: -15px;
-      transform: rotate(30deg);
-      transform-origin: top;
-    }
-
-    .arm.right-arm {
-      right: -15px;
-      transform: rotate(-26deg);
-      transform-origin: top;
-    }
-
-    .leg {
-      position: absolute;
-      width: 22px;
-      height: 72px;
-      background: var(--trouser);
-      border: 4px solid var(--ink);
-      border-radius: 10px;
-      bottom: -63px;
-    }
-
-    .leg.left-leg {
-      left: 10px;
-      transform: rotate(5deg);
-    }
-
-    .leg.right-leg {
-      right: 10px;
-      transform: rotate(-5deg);
-    }
-
-    .shoe {
-      position: absolute;
-      width: 32px;
-      height: 14px;
-      background: var(--ink);
-      border-radius: 10px;
-      bottom: -67px;
-    }
-
-    .shoe.left-shoe {
-      left: 2px;
-    }
-
-    .shoe.right-shoe {
-      right: 2px;
-    }
-
-    /* Box being carried */
-    .carry-box {
-      position: absolute;
-      z-index: 14;
-      left: 275px;
-      bottom: 115px;
-      width: 105px;
-      height: 80px;
-      background: var(--box);
-      border: 4px solid var(--ink);
-      transform: rotate(-2deg);
-      box-shadow: 8px 8px 0 rgba(23, 23, 23, 0.18);
-    }
-
-    .carry-box::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: var(--ink);
-      transform: translateX(-50%);
-    }
-
-    .carry-box::after {
-      content: "AK";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 34px;
-      height: 34px;
-      border: 3px solid var(--ink);
-      border-radius: 50%;
-      background: var(--yellow);
-      display: grid;
-      place-items: center;
-      font-size: 0.65rem;
-      font-weight: 800;
-    }
-
-    /* Small furniture */
-    .sofa {
-      position: absolute;
-      left: 190px;
-      top: 180px;
-      width: 100px;
-      height: 60px;
-      background: var(--pink);
-      border: 4px solid var(--ink);
-      border-radius: 15px 15px 6px 6px;
-      z-index: 5;
-    }
-
-    .sofa::before {
-      content: "";
-      position: absolute;
-      left: -9px;
-      top: 18px;
-      width: 12px;
-      height: 38px;
-      background: var(--pink);
-      border: 4px solid var(--ink);
-      border-right: none;
-      border-radius: 10px 0 0 8px;
-    }
-
-    .sofa::after {
-      content: "";
-      position: absolute;
-      right: -9px;
-      top: 18px;
-      width: 12px;
-      height: 38px;
-      background: var(--pink);
-      border: 4px solid var(--ink);
-      border-left: none;
-      border-radius: 0 10px 8px 0;
-    }
-
-    .visual-note {
-      position: absolute;
-      z-index: 20;
-      right: 25px;
-      bottom: 25px;
-      max-width: 255px;
-      background: var(--ink);
-      color: var(--white);
-      padding: 18px;
-      border-radius: 22px;
-    }
-
-    .visual-note strong {
-      font-family: "Space Grotesk", sans-serif;
-      display: block;
-      font-size: 1.3rem;
-      line-height: 1;
-    }
-
-    .visual-note span {
-      display: block;
-      margin-top: 8px;
-      font-size: 0.78rem;
-      color: #d6d6d6;
-      line-height: 1.45;
-    }
-
-    /* =========================
-       NUMBERS
-    ========================= */
-
-    .numbers {
-      padding: 40px 0;
-    }
-
-    .number-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .number-card {
-      min-height: 165px;
-      border-radius: 28px;
-      padding: 27px;
-      border: 1px solid rgba(23, 23, 23, 0.08);
-    }
-
-    .number-card:nth-child(1) {
-      background: var(--yellow);
-    }
-
-    .number-card:nth-child(2) {
-      background: var(--pink);
-    }
-
-    .number-card:nth-child(3) {
-      background: var(--purple);
-    }
-
-    .number {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 3rem;
-      letter-spacing: -0.06em;
-    }
-
-    .number-card strong {
-      display: block;
-      margin-top: 15px;
-    }
-
-    .number-card p {
-      margin-top: 5px;
-      color: #4d4942;
-      font-size: 0.88rem;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    .section {
-      padding: 85px 0;
-    }
-
-    .section-header {
-      max-width: 740px;
-      margin-bottom: 42px;
-    }
-
-    .kicker {
-      display: block;
-      margin-bottom: 13px;
-      font-size: 0.73rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .section-header h2 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(3rem, 5.4vw, 5.2rem);
-      line-height: 0.92;
-      letter-spacing: -0.06em;
-    }
-
-    .section-header p {
-      max-width: 610px;
-      margin-top: 18px;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 1.02rem;
-    }
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      min-height: 455px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 36px;
-      padding: 32px;
-      border: 1px solid rgba(23, 23, 23, 0.08);
-    }
-
-    .service-one {
-      background: var(--coral);
-    }
-
-    .service-two {
-      background: var(--blue);
-    }
-
-    .service-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .service-number {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      background: var(--ink);
-      color: var(--white);
-      display: grid;
-      place-items: center;
-      font-size: 0.76rem;
-      font-weight: 800;
-    }
-
-    .service-tag {
-      padding: 7px 11px;
-      background: rgba(255,255,255,0.58);
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 800;
-    }
-
-    .service-card h3 {
-      margin-top: 80px;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(2.7rem, 4vw, 4.5rem);
-      line-height: 0.9;
-      letter-spacing: -0.055em;
-      max-width: 470px;
-    }
-
-    .service-card p {
-      margin-top: 18px;
-      max-width: 450px;
-      color: rgba(23,23,23,0.72);
-      line-height: 1.6;
-    }
-
-    .pills {
+    .hero-trust {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 23px;
+      gap: 22px;
+      margin-top: 34px;
     }
 
-    .pills span {
-      padding: 8px 11px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.58);
-      font-size: 0.78rem;
-      font-weight: 700;
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: .84rem;
+      color: #f2f3f5;
     }
 
-    .service-decoration {
-      position: absolute;
-      width: 230px;
-      height: 230px;
-      border-radius: 50%;
-      right: -65px;
-      bottom: -65px;
-      background: rgba(255,255,255,0.25);
-    }
-
-    /* =========================
-       PRICES
-    ========================= */
-
-    .price-area {
-      background: var(--ink);
-      color: var(--white);
-    }
-
-    .price-area .kicker {
-      color: #a8a8a8;
-    }
-
-    .price-area .section-header p {
-      color: #aaa;
-    }
-
-    .price-grid {
+    .trust-icon {
+      width: 29px;
+      height: 29px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+      background: var(--yellow);
+      color: var(--navy);
+      border-radius: 50%;
+      font-weight: 900;
+      font-size: .75rem;
+    }
+
+    .hero-brand-badge {
+      position: absolute;
+      right: 35px;
+      top: 35px;
+      z-index: 10;
+      padding: 10px 15px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.96);
+      color: var(--navy);
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 800;
+      font-size: .82rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    }
+
+
+    /* ================================
+       QUICK STRIP
+    ================================= */
+
+    .quick-strip {
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .quick-item {
+      padding: 24px 20px;
+      border-right: 1px solid var(--border);
+    }
+
+    .quick-item:last-child {
+      border-right: none;
+    }
+
+    .quick-number {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .quick-title {
+      margin-top: 4px;
+      font-weight: 800;
+    }
+
+    .quick-description {
+      color: var(--muted);
+      font-size: .84rem;
+      margin-top: 4px;
+    }
+
+
+    /* ================================
+       GENERAL SECTIONS
+    ================================= */
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(3rem, 5vw, 5.3rem);
+      letter-spacing: -.065em;
+      line-height: .92;
+    }
+
+    .section-heading h2 span {
+      color: #f4b500;
+    }
+
+    .section-heading p {
+      max-width: 500px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+
+    /* ================================
+       SERVICE PHOTO CARDS
+    ================================= */
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .photo-card {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: .25s ease;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 38px rgba(16,26,47,.12);
+    }
+
+    .photo {
+      height: 255px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo img {
+      transition: transform .4s ease;
+    }
+
+    .photo-card:hover .photo img {
+      transform: scale(1.05);
+    }
+
+    .photo-brand {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--yellow);
+      color: var(--navy);
+      padding: 7px 10px;
+      border-radius: 8px;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .03em;
+    }
+
+    .card-body {
+      padding: 19px;
+    }
+
+    .card-body h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.35rem;
+    }
+
+    .card-body p {
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.55;
+      margin-top: 7px;
+    }
+
+    .arrow-circle {
+      margin-top: 16px;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+
+    /* ================================
+       SPLIT STORY SECTION
+    ================================= */
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .split-image {
+      min-height: 570px;
+      border-radius: 32px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .split-image img {
+      object-fit: cover;
+    }
+
+    .image-caption {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      right: 22px;
+      background: rgba(16,26,47,.91);
+      color: white;
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .image-caption strong {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.25rem;
+      display: block;
+    }
+
+    .image-caption span {
+      font-size: .8rem;
+      color: #ccd3df;
+      display: block;
+      margin-top: 4px;
+    }
+
+    .split-content {
+      border-radius: 32px;
+      background: var(--light-yellow);
+      padding: 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .split-content h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: .9;
+      letter-spacing: -.06em;
+    }
+
+    .split-content p {
+      margin-top: 20px;
+      color: #57554c;
+      line-height: 1.65;
+      max-width: 530px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+      margin-top: 28px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 11px;
+      align-items: center;
+      font-weight: 700;
+      font-size: .91rem;
+    }
+
+    .check {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: .7rem;
+      flex-shrink: 0;
+    }
+
+
+    /* ================================
+       PRICING
+    ================================= */
+
+    .pricing-section {
+      background: var(--navy);
+      color: white;
+    }
+
+    .pricing-section .section-heading p {
+      color: #aeb6c4;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
 
-    .price-card {
-      background: #242424;
-      border: 1px solid #383838;
-      border-radius: 34px;
+    .pricing-card {
+      background: var(--navy-2);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 28px;
       padding: 34px;
     }
 
-    .price-card.highlighted {
+    .pricing-card.yellow {
       background: var(--yellow);
-      color: var(--ink);
-      border-color: var(--yellow);
+      color: var(--navy);
       transform: rotate(1deg);
     }
 
-    .price-small {
-      font-size: 0.72rem;
+    .pricing-label {
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: .12em;
+      font-size: .72rem;
       font-weight: 800;
-      color: #aaa;
+      color: #9ea7b5;
     }
 
-    .highlighted .price-small {
-      color: #5c512b;
+    .yellow .pricing-label {
+      color: #625524;
     }
 
-    .price-card h3 {
-      margin-top: 9px;
+    .pricing-card h3 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 2rem;
+      font-size: 1.9rem;
+      margin-top: 10px;
     }
 
     .price {
       margin-top: 27px;
       font-family: "Space Grotesk", sans-serif;
-      font-size: 4.7rem;
-      line-height: 0.9;
-      letter-spacing: -0.07em;
+      font-size: 5rem;
+      line-height: .85;
+      letter-spacing: -.075em;
     }
 
     .price-unit {
       margin-top: 10px;
-      color: #a0a0a0;
-      font-size: 0.86rem;
+      color: #969fad;
+      font-size: .84rem;
     }
 
-    .highlighted .price-unit {
-      color: #645a35;
+    .yellow .price-unit {
+      color: #625524;
     }
 
-    .line {
+    .pricing-divider {
       height: 1px;
-      margin: 27px 0;
-      background: #3b3b3b;
+      background: rgba(255,255,255,.12);
+      margin: 28px 0;
     }
 
-    .highlighted .line {
-      background: rgba(23,23,23,0.15);
+    .yellow .pricing-divider {
+      background: rgba(16,26,47,.14);
     }
 
-    .price-list {
+    .pricing-list {
       list-style: none;
       display: grid;
       gap: 10px;
     }
 
-    .price-list li {
+    .pricing-list li {
       display: flex;
-      gap: 9px;
-      color: #ddd;
-      font-size: 0.92rem;
+      gap: 10px;
+      color: #e1e5eb;
+      font-size: .91rem;
     }
 
-    .highlighted .price-list li {
-      color: #302a18;
+    .yellow .pricing-list li {
+      color: #2d2a21;
     }
 
-    .price-list li::before {
+    .pricing-list li::before {
       content: "✓";
       font-weight: 900;
     }
 
-    .price-note {
-      margin-top: 22px;
-      color: #8d8d8d;
-      font-size: 0.79rem;
-      line-height: 1.5;
+    .pricing-note {
+      margin-top: 24px;
+      color: #8992a0;
+      font-size: .78rem;
     }
 
-    .highlighted .price-note {
-      color: #625936;
+    .yellow .pricing-note {
+      color: #61572f;
     }
 
-    /* =========================
+
+    /* ================================
        INCLUDED
-    ========================= */
+    ================================= */
 
-    .included-box {
-      background: var(--green);
-      border-radius: 38px;
-      padding: 50px;
+    .included-section {
+      background: var(--light-blue);
+    }
+
+    .included-layout {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 50px;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 48px;
       align-items: center;
     }
 
-    .included-box h2 {
+    .included-layout h2 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(3rem, 5vw, 4.8rem);
-      line-height: 0.9;
-      letter-spacing: -0.06em;
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: .9;
+      letter-spacing: -.06em;
     }
 
-    .included-box p {
-      margin-top: 18px;
-      max-width: 440px;
-      color: #3e4c34;
+    .included-layout > div > p {
+      margin-top: 19px;
+      color: var(--muted);
       line-height: 1.65;
+      max-width: 450px;
     }
 
-    .included-grid {
+    .included-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+      gap: 13px;
     }
 
-    .included-item {
-      min-height: 110px;
-      padding: 18px;
-      border-radius: 22px;
-      background: rgba(255,255,255,0.64);
+    .included-box {
+      background: white;
+      min-height: 125px;
+      padding: 19px;
+      border-radius: 21px;
+      border: 1px solid var(--border);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .included-icon {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--yellow);
       display: grid;
       place-items: center;
-      border-radius: 50%;
-      background: var(--ink);
-      color: var(--white);
-      font-size: 0.68rem;
-      font-weight: 800;
+      font-size: .7rem;
+      font-weight: 900;
     }
 
-    .included-item strong {
-      margin-top: 15px;
-      font-size: 0.88rem;
+    .included-box strong {
+      margin-top: 13px;
     }
 
-    /* =========================
-       HOW IT WORKS
-    ========================= */
 
-    .steps {
+    /* ================================
+       PROCESS
+    ================================= */
+
+    .process {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-    }
-
-    .step {
-      padding: 30px;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
 
-    .step + .step {
+    .process-step {
+      padding: 34px 28px;
+    }
+
+    .process-step + .process-step {
       border-left: 1px solid var(--border);
     }
 
-    .step-no {
+    .process-number {
       font-family: "Space Grotesk", sans-serif;
       font-size: 3.2rem;
-      letter-spacing: -0.06em;
-      color: #aaa;
+      color: #c0c4ca;
     }
 
-    .step h3 {
-      margin-top: 30px;
+    .process-step h3 {
+      margin-top: 27px;
       font-family: "Space Grotesk", sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.55rem;
     }
 
-    .step p {
-      margin-top: 10px;
+    .process-step p {
+      margin-top: 9px;
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: .88rem;
       line-height: 1.6;
     }
 
-    /* =========================
-       CTA
-    ========================= */
 
-    .cta-section {
-      padding: 30px 0 100px;
+    /* ================================
+       FINAL CONTACT
+    ================================= */
+
+    .contact-section {
+      padding: 45px 0 90px;
     }
 
-    .cta-box {
-      position: relative;
-      overflow: hidden;
-      padding: 60px;
-      border-radius: 42px;
-      background: var(--pink);
-    }
-
-    .cta-content {
-      position: relative;
-      z-index: 5;
-    }
-
-    .cta-box h2 {
-      max-width: 760px;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(3.2rem, 6vw, 6rem);
-      line-height: 0.88;
-      letter-spacing: -0.065em;
-    }
-
-    .cta-box p {
-      max-width: 550px;
-      margin-top: 19px;
-      color: #564149;
-      line-height: 1.6;
-    }
-
-    .cta-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
-    .decor-one {
-      position: absolute;
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      background: var(--purple);
-      right: -70px;
-      top: -95px;
-    }
-
-    .decor-two {
-      position: absolute;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
+    .contact-box {
       background: var(--yellow);
-      right: 155px;
-      bottom: -35px;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      padding: 30px 0 45px;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-inner {
+      border-radius: 32px;
+      padding: 48px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 30px;
+    }
+
+    .contact-box h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(3rem, 5vw, 5.4rem);
+      line-height: .88;
+      letter-spacing: -.065em;
+      max-width: 730px;
+    }
+
+    .contact-box p {
+      margin-top: 16px;
+      color: #5e532f;
+      max-width: 520px;
+    }
+
+    .contact-button {
+      background: var(--navy);
+      color: white;
+      min-height: 57px;
+      padding: 0 25px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+
+    /* ================================
+       FOOTER
+    ================================= */
+
+    footer {
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 28px 0 40px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
       gap: 20px;
+      align-items: center;
       color: var(--muted);
-      font-size: 0.86rem;
+      font-size: .83rem;
     }
 
     .footer-brand {
-      color: var(--ink);
+      color: var(--navy);
       font-family: "Space Grotesk", sans-serif;
-      font-weight: 700;
+      font-size: 1rem;
+      font-weight: 800;
     }
 
-    .email {
+    .footer-email {
       text-decoration: underline;
       text-underline-offset: 4px;
     }
 
-    /* =========================
-       RESPONSIVE
-    ========================= */
 
-    @media (max-width: 950px) {
-      .hero-grid,
-      .included-box {
+    /* ================================
+       MOBILE
+    ================================= */
+
+    @media (max-width: 1000px) {
+
+      .hero-inner {
         grid-template-columns: 1fr;
       }
 
-      .hero-visual {
-        min-height: 480px;
+      .hero {
+        background-position: center;
       }
 
-      .service-grid,
-      .price-grid {
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .split,
+      .included-layout {
         grid-template-columns: 1fr;
       }
 
-      .included-box {
-        gap: 35px;
+      .pricing-grid {
+        grid-template-columns: 1fr;
       }
+
+      .contact-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
     }
 
-    @media (max-width: 720px) {
+
+    @media (max-width: 700px) {
+
       .container {
-        width: min(100% - 24px, 1180px);
+        width: min(100% - 24px, 1220px);
+      }
+
+      .nav {
+        min-height: 68px;
       }
 
       .nav-links {
         display: none;
       }
 
-      .hero {
-        padding-top: 45px;
+      .header-button {
+        padding: 11px 15px;
+        font-size: .82rem;
       }
 
-      .hero h1 {
-        font-size: 3.8rem;
-      }
-
-      .hero-visual {
-        min-height: 420px;
-        border-radius: 30px;
-      }
-
-      .scene {
-        transform: scale(0.82);
-        transform-origin: bottom left;
-        width: 650px;
-      }
-
-      .visual-note {
-        right: 17px;
-        bottom: 17px;
-        max-width: 215px;
-      }
-
-      .number-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card {
-        min-height: 410px;
-        border-radius: 29px;
-        padding: 27px;
-      }
-
-      .service-card h3 {
-        margin-top: 65px;
-      }
-
-      .included-box {
-        padding: 30px;
-        border-radius: 29px;
-      }
-
-      .included-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      .step + .step {
-        border-left: none;
-        border-top: none;
-      }
-
-      .cta-box {
-        padding: 35px;
-        border-radius: 30px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .hero h1 {
-        font-size: 3.2rem;
+      .hero,
+      .hero-inner {
+        min-height: 680px;
       }
 
       .hero-copy {
-        font-size: 0.98rem;
+        padding: 50px 0;
       }
 
-      .included-grid {
+      .hero h1 {
+        font-size: 3.7rem;
+      }
+
+      .hero p {
+        font-size: .98rem;
+      }
+
+      .hero-trust {
+        gap: 13px;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .quick-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .quick-item:nth-child(3),
+      .quick-item:nth-child(4) {
+        border-top: 1px solid var(--border);
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-heading p {
+        margin-top: 17px;
+      }
+
+      .photo-grid {
         grid-template-columns: 1fr;
       }
 
-      .price {
-        font-size: 4rem;
+      .photo {
+        height: 280px;
       }
+
+      .split-image {
+        min-height: 420px;
+      }
+
+      .split-content {
+        padding: 34px;
+      }
+
+      .included-list {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step + .process-step {
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+
+      .contact-box {
+        padding: 34px;
+      }
+
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- =========================
+
+  <!-- ================================
        NAVIGATION
-  ========================= -->
+  ================================= -->
 
   <header>
+
     <div class="container nav">
 
       <a href="#" class="logo">
-        <span class="logo-mark">AK</span>
-        <span>AKpayments</span>
+
+        <div class="logo-mark">
+          AK
+        </div>
+
+        <span>
+          AKpayments
+        </span>
+
       </a>
 
+
       <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#prices">Prices</a>
-        <a href="#included">Included</a>
-        <a href="#contact">Contact</a>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#prices">
+          Prices
+        </a>
+
+        <a href="#included">
+          Included
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
       </nav>
 
+
       <a
-        class="nav-cta"
+        class="header-button"
         href="mailto:AKpaymentsltd@gmail.com?subject=AKpayments%20Price%20Request"
       >
         Ask for a price
       </a>
 
     </div>
+
   </header>
+
 
 
   <main>
 
-    <!-- =========================
+
+    <!-- ================================
          HERO
-    ========================= -->
+    ================================= -->
 
     <section class="hero">
 
-      <div class="container hero-grid">
+      <div class="hero-brand-badge">
+        AKpayments • Moving Support
+      </div>
 
-        <div>
+
+      <div class="container hero-inner">
+
+        <div class="hero-copy">
 
           <div class="eyebrow">
-            MANPOWER • HOUSE SHIFTING
+            MANPOWER & HOUSE SHIFTING
           </div>
 
+
           <h1>
-            Moving made
-            <span class="highlight">easier.</span>
+            Reliable help
+            for <span>your move.</span>
           </h1>
 
-          <p class="hero-copy">
-            Need extra hands or help with moving home?
-            AKpayments provides practical manpower and
-            house-shifting support for the jobs that need
-            lifting, carrying, loading and unloading.
+
+          <p>
+            Need extra hands? AKpayments provides practical
+            manpower and house shifting support for homes,
+            flats and moving jobs.
           </p>
+
 
           <div class="hero-buttons">
 
             <a
-              class="btn btn-dark"
-              href="mailto:AKpaymentsltd@gmail.com?subject=AKpayments%20Price%20Request&body=Hi%20AKpayments,%0A%0AI%20would%20like%20a%20price%20for%20your%20service.%0A%0AService:%20%0APrefered%20date:%20%0AJob%20details:%20%0A%0AThanks"
+              class="button button-yellow"
+              href="mailto:AKpaymentsltd@gmail.com?subject=AKpayments%20Price%20Request&body=Hi%20AKpayments,%0A%0AI%20would%20like%20a%20price.%0A%0AService:%20%0ADate:%20%0AFrom:%20%0ATo:%20%0AJob%20details:%20%0A%0AThanks"
             >
-              Ask for a price →
+              Ask for a price
+              →
             </a>
 
-            <a class="btn btn-light" href="#services">
-              See our services
+
+            <a
+              class="button button-outline"
+              href="#services"
+            >
+              Our services
+              →
             </a>
+
+          </div>
+
+
+          <div class="hero-trust">
+
+
+            <div class="trust-item">
+
+              <div class="trust-icon">
+                ✓
+              </div>
+
+              Trusted support
+
+            </div>
+
+
+            <div class="trust-item">
+
+              <div class="trust-icon">
+                ✓
+              </div>
+
+              Careful handling
+
+            </div>
+
+
+            <div class="trust-item">
+
+              <div class="trust-icon">
+                ✓
+              </div>
+
+              Homes & flats
+
+            </div>
+
+
+            <div class="trust-item">
+
+              <div class="trust-icon">
+                ✓
+              </div>
+
+              Flexible support
+
+            </div>
+
 
           </div>
 
         </div>
 
+      </div>
 
-        <!-- VISUAL -->
+    </section>
 
-        <div class="hero-visual">
 
-          <div class="visual-label">
-            YOUR MOVE. OUR TEAM.
+
+    <!-- ================================
+         QUICK STRIP
+    ================================= -->
+
+    <section class="quick-strip">
+
+      <div class="container quick-grid">
+
+
+        <div class="quick-item">
+
+          <div class="quick-number">
+            02
           </div>
 
-          <div class="visual-circle"></div>
-          <div class="visual-yellow"></div>
-          <div class="visual-purple"></div>
+          <div class="quick-title">
+            Core services
+          </div>
 
-          <div class="scene">
+          <div class="quick-description">
+            Manpower + house shifting
+          </div>
 
-            <div class="house">
-
-              <div class="roof">
-                <div class="roof-inner"></div>
-              </div>
-
-              <div class="window left"></div>
-              <div class="window right"></div>
-              <div class="door"></div>
-
-            </div>
+        </div>
 
 
-            <div class="sofa"></div>
+        <div class="quick-item">
+
+          <div class="quick-number">
+            £30
+          </div>
+
+          <div class="quick-title">
+            Manpower
+          </div>
+
+          <div class="quick-description">
+            Starting from / worker / hour
+          </div>
+
+        </div>
 
 
-            <div class="van">
+        <div class="quick-item">
 
-              <div class="van-logo">
-                AK
-              </div>
+          <div class="quick-number">
+            £199
+          </div>
 
-              <div class="van-front">
+          <div class="quick-title">
+            House shifting
+          </div>
 
-                <div class="van-window"></div>
+          <div class="quick-description">
+            Starting from / move
+          </div>
 
-              </div>
-
-              <div class="wheel one"></div>
-              <div class="wheel two"></div>
-
-            </div>
-
-
-            <!-- PERSON ONE -->
-
-            <div class="person-one">
-
-              <div class="head">
-                <div class="hair"></div>
-              </div>
-
-              <div class="body"></div>
-
-              <div class="arm left-arm"></div>
-              <div class="arm right-arm"></div>
-
-              <div class="leg left-leg"></div>
-              <div class="leg right-leg"></div>
-
-              <div class="shoe left-shoe"></div>
-              <div class="shoe right-shoe"></div>
-
-            </div>
+        </div>
 
 
-            <!-- PERSON TWO -->
+        <div class="quick-item">
 
-            <div class="person-two">
+          <div class="quick-number">
+            AK
+          </div>
 
-              <div class="head">
-                <div class="hair"></div>
-              </div>
+          <div class="quick-title">
+            Simple contact
+          </div>
 
-              <div
-                class="body"
-                style="background:#e36b53;"
-              ></div>
+          <div class="quick-description">
+            Email us for your price
+          </div>
 
-              <div class="arm left-arm"></div>
-              <div class="arm right-arm"></div>
-
-              <div class="leg left-leg"></div>
-              <div class="leg right-leg"></div>
-
-              <div class="shoe left-shoe"></div>
-              <div class="shoe right-shoe"></div>
-
-            </div>
+        </div>
 
 
-            <!-- BOX -->
+      </div>
 
-            <div class="carry-box"></div>
+    </section>
 
-            <div class="scene-floor"></div>
+
+
+    <!-- ================================
+         SERVICES
+    ================================= -->
+
+    <section class="section" id="services">
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+          <div>
+
+            <h2>
+              Our <span>Services</span>
+            </h2>
 
           </div>
 
+          <p>
+            Practical manpower and moving support for lifting,
+            carrying, loading and unloading.
+          </p>
 
-          <div class="visual-note">
+        </div>
+
+
+
+        <div class="photo-grid">
+
+
+          <!-- CARD 1 -->
+
+          <article class="photo-card">
+
+            <div class="photo">
+
+              <img
+                src="https://images.pexels.com/photos/7464687/pexels-photo-7464687.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                alt="Two movers carrying boxes"
+              >
+
+              <div class="photo-brand">
+                AKpayments
+              </div>
+
+            </div>
+
+
+            <div class="card-body">
+
+              <h3>
+                Manpower Support
+              </h3>
+
+              <p>
+                Extra hands for lifting, carrying,
+                loading and unloading.
+              </p>
+
+              <div class="arrow-circle">
+                →
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 2 -->
+
+          <article class="photo-card">
+
+            <div class="photo">
+
+              <img
+                src="https://images.pexels.com/photos/5025513/pexels-photo-5025513.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                alt="Worker loading boxes"
+              >
+
+              <div class="photo-brand">
+                AKpayments
+              </div>
+
+            </div>
+
+
+            <div class="card-body">
+
+              <h3>
+                House Shifting
+              </h3>
+
+              <p>
+                Moving support for homes and
+                flats when moving day arrives.
+              </p>
+
+              <div class="arrow-circle">
+                →
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 3 -->
+
+          <article class="photo-card">
+
+            <div class="photo">
+
+              <img
+                src="https://images.pexels.com/photos/7464244/pexels-photo-7464244.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                alt="Movers carrying boxes together"
+              >
+
+              <div class="photo-brand">
+                AKpayments
+              </div>
+
+            </div>
+
+
+            <div class="card-body">
+
+              <h3>
+                Heavy Lifting
+              </h3>
+
+              <p>
+                Help with heavy and bulky items
+                that need more than one pair of hands.
+              </p>
+
+              <div class="arrow-circle">
+                →
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 4 -->
+
+          <article class="photo-card">
+
+            <div class="photo">
+
+              <img
+                src="https://images.pexels.com/photos/20706509/pexels-photo-20706509.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                alt="Moving team working with boxes"
+              >
+
+              <div class="photo-brand">
+                AKpayments
+              </div>
+
+            </div>
+
+
+            <div class="card-body">
+
+              <h3>
+                Moving Team
+              </h3>
+
+              <p>
+                A helping team for the physical
+                side of your move.
+              </p>
+
+              <div class="arrow-circle">
+                →
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================================
+         STORY / BIG VISUAL
+    ================================= -->
+
+    <section class="section">
+
+      <div class="container split">
+
+
+        <div class="split-image">
+
+          <img
+            src="https://images.pexels.com/photos/7464232/pexels-photo-7464232.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Professional movers carrying moving boxes"
+          >
+
+
+          <div class="image-caption">
 
             <strong>
               Heavy work. Handled.
             </strong>
 
             <span>
-              People to help with boxes,
-              furniture, loading and moving day.
+              The people and practical support behind moving day.
             </span>
 
           </div>
 
         </div>
 
-      </div>
-
-    </section>
 
 
-    <!-- =========================
-         QUICK FACTS
-    ========================= -->
-
-    <section class="numbers">
-
-      <div class="container number-grid">
-
-        <div class="number-card">
-
-          <div class="number">02</div>
-
-          <strong>
-            Services
-          </strong>
-
-          <p>
-            Manpower + house shifting.
-          </p>
-
-        </div>
-
-
-        <div class="number-card">
-
-          <div class="number">£</div>
-
-          <strong>
-            Starting prices
-          </strong>
-
-          <p>
-            Clear starting prices before you book.
-          </p>
-
-        </div>
-
-
-        <div class="number-card">
-
-          <div class="number">AK</div>
-
-          <strong>
-            One simple contact
-          </strong>
-
-          <p>
-            Email us and tell us what you need.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         SERVICES
-    ========================= -->
-
-    <section class="section" id="services">
-
-      <div class="container">
-
-        <div class="section-header">
+        <div class="split-content">
 
           <span class="kicker">
-            What we do
+            Moving support
           </span>
 
+
           <h2>
-            You bring the job.
-            We bring the hands.
+            You move the
+            plan.
+            We handle
+            the heavy part.
           </h2>
 
+
           <p>
-            Two straightforward services for moving,
-            lifting and shifting work.
+            Moving can be exhausting. Our job is to take
+            care of the physical side — carrying, lifting,
+            loading and unloading — so your move is easier
+            to manage.
           </p>
 
-        </div>
+
+          <ul class="check-list">
 
 
-        <div class="service-grid">
+            <li>
+
+              <span class="check">
+                ✓
+              </span>
+
+              Loading help
+
+            </li>
 
 
-          <article class="service-card service-one">
+            <li>
 
-            <div class="service-top">
+              <span class="check">
+                ✓
+              </span>
 
-              <div class="service-number">
-                01
-              </div>
+              Unloading help
 
-              <div class="service-tag">
-                MANPOWER
-              </div>
-
-            </div>
-
-            <h3>
-              Need extra hands?
-            </h3>
-
-            <p>
-              Get practical workers for lifting, carrying,
-              loading, unloading and furniture-moving jobs.
-            </p>
-
-            <div class="pills">
-
-              <span>Heavy lifting</span>
-              <span>Loading</span>
-              <span>Unloading</span>
-              <span>Furniture</span>
-
-            </div>
-
-            <div class="service-decoration"></div>
-
-          </article>
+            </li>
 
 
-          <article class="service-card service-two">
+            <li>
 
-            <div class="service-top">
+              <span class="check">
+                ✓
+              </span>
 
-              <div class="service-number">
-                02
-              </div>
+              Furniture carrying
 
-              <div class="service-tag">
-                HOUSE SHIFTING
-              </div>
+            </li>
 
-            </div>
 
-            <h3>
-              Moving day,
-              made easier.
-            </h3>
+            <li>
 
-            <p>
-              Hands-on support for moving home,
-              carrying your belongings and getting
-              everything loaded and unloaded.
-            </p>
+              <span class="check">
+                ✓
+              </span>
 
-            <div class="pills">
+              Flexible manpower
 
-              <span>Move-day support</span>
-              <span>Carrying</span>
-              <span>Loading</span>
-              <span>Unloading</span>
+            </li>
 
-            </div>
 
-            <div class="service-decoration"></div>
-
-          </article>
+          </ul>
 
         </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- =========================
+
+    <!-- ================================
          PRICES
-    ========================= -->
+    ================================= -->
 
-    <section class="section price-area" id="prices">
+    <section
+      class="section pricing-section"
+      id="prices"
+    >
 
       <div class="container">
 
-        <div class="section-header">
 
-          <span class="kicker">
-            Starting prices
-          </span>
+        <div class="section-heading">
 
-          <h2>
-            Know where you stand.
-          </h2>
+          <div>
+
+            <h2>
+              Clear
+              <span style="color:#ffca28;">
+                starting prices.
+              </span>
+            </h2>
+
+          </div>
 
           <p>
-            Prices shown are starting prices. Your exact price
-            can change depending on the size of the job,
-            number of workers and time needed.
+            Your final price depends on the size of the job,
+            number of workers and time required.
           </p>
 
         </div>
 
 
-        <div class="price-grid">
+
+        <div class="pricing-grid">
 
 
-          <article class="price-card">
+          <!-- MANPOWER -->
 
-            <div class="price-small">
-              MANPOWER
+          <article class="pricing-card">
+
+            <div class="pricing-label">
+              Manpower
             </div>
 
             <h3>
@@ -1665,18 +1598,32 @@
               from / hour / worker
             </div>
 
-            <div class="line"></div>
 
-            <ul class="price-list">
+            <div class="pricing-divider"></div>
 
-              <li>Lifting & carrying</li>
-              <li>Loading & unloading</li>
-              <li>Furniture handling</li>
-              <li>Flexible worker numbers</li>
+
+            <ul class="pricing-list">
+
+              <li>
+                Lifting & carrying
+              </li>
+
+              <li>
+                Loading & unloading
+              </li>
+
+              <li>
+                Furniture moving
+              </li>
+
+              <li>
+                Flexible worker numbers
+              </li>
 
             </ul>
 
-            <p class="price-note">
+
+            <p class="pricing-note">
               Starting price. Ask us for the exact price
               for your job.
             </p>
@@ -1684,10 +1631,13 @@
           </article>
 
 
-          <article class="price-card highlighted">
 
-            <div class="price-small">
-              HOUSE SHIFTING
+          <!-- HOUSE SHIFTING -->
+
+          <article class="pricing-card yellow">
+
+            <div class="pricing-label">
+              House Shifting
             </div>
 
             <h3>
@@ -1702,18 +1652,32 @@
               from / move
             </div>
 
-            <div class="line"></div>
 
-            <ul class="price-list">
+            <div class="pricing-divider"></div>
 
-              <li>Move-day manpower</li>
-              <li>Loading assistance</li>
-              <li>Unloading assistance</li>
-              <li>Furniture carrying</li>
+
+            <ul class="pricing-list">
+
+              <li>
+                Move-day support
+              </li>
+
+              <li>
+                Loading assistance
+              </li>
+
+              <li>
+                Unloading assistance
+              </li>
+
+              <li>
+                Furniture carrying
+              </li>
 
             </ul>
 
-            <p class="price-note">
+
+            <p class="pricing-note">
               Starting price. Ask us for the exact price
               for your move.
             </p>
@@ -1728,103 +1692,117 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- ================================
          INCLUDED
-    ========================= -->
+    ================================= -->
 
-    <section class="section" id="included">
+    <section class="section included-section" id="included">
 
-      <div class="container">
+      <div class="container included-layout">
 
-        <div class="included-box">
 
-          <div>
+        <div>
 
-            <span class="kicker">
-              What's included
-            </span>
+          <span class="kicker">
+            What's included
+          </span>
 
-            <h2>
-              We handle
-              the hard part.
-            </h2>
+          <h2>
+            Practical help
+            from start to finish.
+          </h2>
 
-            <p>
-              Our service is focused on the physical work
-              that makes moving and shifting tiring.
-            </p>
+          <p>
+            AKpayments focuses on the jobs that need people
+            physically there — lifting, carrying, loading
+            and unloading.
+          </p>
+
+        </div>
+
+
+
+        <div class="included-list">
+
+
+          <div class="included-box">
+
+            <div class="included-icon">
+              01
+            </div>
+
+            <strong>
+              Loading
+            </strong>
 
           </div>
 
 
-          <div class="included-grid">
+          <div class="included-box">
 
-            <div class="included-item">
-
-              <div class="included-icon">01</div>
-
-              <strong>
-                Loading
-              </strong>
-
+            <div class="included-icon">
+              02
             </div>
 
-
-            <div class="included-item">
-
-              <div class="included-icon">02</div>
-
-              <strong>
-                Unloading
-              </strong>
-
-            </div>
-
-
-            <div class="included-item">
-
-              <div class="included-icon">03</div>
-
-              <strong>
-                Heavy lifting
-              </strong>
-
-            </div>
-
-
-            <div class="included-item">
-
-              <div class="included-icon">04</div>
-
-              <strong>
-                Furniture carrying
-              </strong>
-
-            </div>
-
-
-            <div class="included-item">
-
-              <div class="included-icon">05</div>
-
-              <strong>
-                Move-day help
-              </strong>
-
-            </div>
-
-
-            <div class="included-item">
-
-              <div class="included-icon">06</div>
-
-              <strong>
-                Flexible manpower
-              </strong>
-
-            </div>
+            <strong>
+              Unloading
+            </strong>
 
           </div>
+
+
+          <div class="included-box">
+
+            <div class="included-icon">
+              03
+            </div>
+
+            <strong>
+              Heavy lifting
+            </strong>
+
+          </div>
+
+
+          <div class="included-box">
+
+            <div class="included-icon">
+              04
+            </div>
+
+            <strong>
+              Furniture carrying
+            </strong>
+
+          </div>
+
+
+          <div class="included-box">
+
+            <div class="included-icon">
+              05
+            </div>
+
+            <strong>
+              Move-day support
+            </strong>
+
+          </div>
+
+
+          <div class="included-box">
+
+            <div class="included-icon">
+              06
+            </div>
+
+            <strong>
+              Flexible manpower
+            </strong>
+
+          </div>
+
 
         </div>
 
@@ -1833,50 +1811,59 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- ================================
          HOW IT WORKS
-    ========================= -->
+    ================================= -->
 
     <section class="section">
 
       <div class="container">
 
-        <div class="section-header">
 
-          <span class="kicker">
-            How it works
-          </span>
+        <div class="section-heading">
 
-          <h2>
-            Just tell us what you need.
-          </h2>
+          <div>
+
+            <span class="kicker">
+              How it works
+            </span>
+
+            <h2>
+              Easy from
+              the first message.
+            </h2>
+
+          </div>
 
         </div>
 
 
-        <div class="steps">
 
-          <div class="step">
+        <div class="process">
 
-            <div class="step-no">
+
+          <div class="process-step">
+
+            <div class="process-number">
               01
             </div>
 
             <h3>
-              Tell us about the job
+              Tell us what you need
             </h3>
 
             <p>
-              Send us an email with your service,
-              date and a few details about the work.
+              Send us your service, date and
+              a few details about the job.
             </p>
 
           </div>
 
 
-          <div class="step">
+          <div class="process-step">
 
-            <div class="step-no">
+            <div class="process-number">
               02
             </div>
 
@@ -1885,16 +1872,16 @@
             </h3>
 
             <p>
-              We'll look at what you need and confirm
-              the price for the job.
+              We look at the requirements and
+              confirm the price for your job.
             </p>
 
           </div>
 
 
-          <div class="step">
+          <div class="process-step">
 
-            <div class="step-no">
+            <div class="process-number">
               03
             </div>
 
@@ -1903,11 +1890,12 @@
             </h3>
 
             <p>
-              Once everything is agreed,
-              we'll be ready to help.
+              Once agreed, we'll be ready to
+              provide the manpower you need.
             </p>
 
           </div>
+
 
         </div>
 
@@ -1916,54 +1904,44 @@
     </section>
 
 
-    <!-- =========================
-         FINAL CTA
-    ========================= -->
 
-    <section class="cta-section" id="contact">
+    <!-- ================================
+         CONTACT
+    ================================= -->
+
+    <section class="contact-section" id="contact">
 
       <div class="container">
 
-        <div class="cta-box">
+        <div class="contact-box">
 
-          <div class="cta-content">
+
+          <div>
 
             <span class="kicker">
               AKpayments
             </span>
 
             <h2>
-              Got a move?
               Need a hand?
+              Ask us for a price.
             </h2>
 
             <p>
-              Send us the details and ask us for a price.
-              We'll take it from there.
+              Tell us about your move or manpower requirement
+              and we'll get back to you.
             </p>
-
-            <div class="cta-buttons">
-
-              <a
-                class="btn btn-dark"
-                href="mailto:AKpaymentsltd@gmail.com?subject=AKpayments%20Price%20Request&body=Hi%20AKpayments,%0A%0AI%20would%20like%20a%20price.%0A%0AService:%20%0ADate:%20%0AFrom:%20%0ATo:%20%0AJob%20details:%20%0A%0AThanks"
-              >
-                Ask for a price →
-              </a>
-
-              <a
-                class="btn btn-light"
-                href="mailto:AKpaymentsltd@gmail.com"
-              >
-                AKpaymentsltd@gmail.com
-              </a>
-
-            </div>
 
           </div>
 
-          <div class="decor-one"></div>
-          <div class="decor-two"></div>
+
+          <a
+            class="contact-button"
+            href="mailto:AKpaymentsltd@gmail.com?subject=AKpayments%20Price%20Request&body=Hi%20AKpayments,%0A%0AI%20would%20like%20a%20price.%0A%0AService:%20%0ADate:%20%0AFrom:%20%0ATo:%20%0ANumber%20of%20workers:%20%0AJob%20details:%20%0A%0AThanks"
+          >
+            Ask for a price →
+          </a>
+
 
         </div>
 
@@ -1971,26 +1949,32 @@
 
     </section>
 
+
   </main>
 
 
-  <!-- =========================
+
+  <!-- ================================
        FOOTER
-    ========================= -->
+  ================================= -->
 
   <footer>
 
-    <div class="container footer-inner">
+    <div class="container footer">
 
       <div>
+
         <span class="footer-brand">
           AKpayments
         </span>
+
         — Manpower & House Shifting
+
       </div>
 
+
       <a
-        class="email"
+        class="footer-email"
         href="mailto:AKpaymentsltd@gmail.com"
       >
         AKpaymentsltd@gmail.com
@@ -1999,6 +1983,7 @@
     </div>
 
   </footer>
+
 
 </body>
 </html>
